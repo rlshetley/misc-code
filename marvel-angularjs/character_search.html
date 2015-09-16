@@ -1,0 +1,27 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">
+            Marvel Characters Fun
+        </h3>
+    </div>
+    <div class="panel-body">
+      <div class="form-group">
+        <label for="characterName">Character Name</label>
+        <input type="text" class="form-control" id="characterName" placeholder="Character Name" ng-model="search_name" />
+        <br />
+        <input class="btn btn-default" type="button" value="Search" ng-click="search()" />
+        <input class="btn btn-default" type="button" value="Clear" ng-click="clear()" />
+      </div>
+      <br />
+      <div collapse="characters.length < 1">
+        <label>Results</label>
+        <ul>
+          <li ng-repeat="character in characters">
+            <span>
+              {{character.name}} | <a href="#events/{{character.id}}">Events</a>
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
