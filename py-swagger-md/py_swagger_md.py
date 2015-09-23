@@ -79,7 +79,7 @@ def print_resource(target, resource, defs):
 
     print_response(target, resource)
 
-r = requests.get('http://tri-tspiw-tstv.twi.dom:9000/swagger/docs/v1/')
+r = requests.get('http://localhost:57129/swagger/docs/v1/')
 
 json_data=r.text
 
@@ -115,6 +115,11 @@ for path in data['paths']:
     if 'put' in resource:
         target.write('### PUT\n')
         print_resource(target, resource['put'],defs)
+        target.write("\n")
+
+    if 'delete' in resource:
+        target.write('### DELETE\n')
+        print_resource(target, resource['delete'],defs)
         target.write("\n")
 
     target.write("\n")
