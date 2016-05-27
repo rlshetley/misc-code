@@ -2,13 +2,13 @@
     'use strict';
 
     angular
-        .module('comic_app')
+        .module('marvelLearnApp')
         .factory('comicService', comicService);
 
     comicService.$inject = ['$q', '$http'];
 
     function comicService($q, $http){
-        var publicKey = 'YOU NEED A KEY';
+        var publicKey = 'YOU WILL NEED A KEY';
       	var baseUrl = 'http://gateway.marvel.com/v1/';
       	var limit = 50;
 

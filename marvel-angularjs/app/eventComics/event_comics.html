@@ -9,7 +9,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr ng-repeat="comic in comics">
+    <tr ng-repeat="comic in vm.comics">
       <td>
         <span>
             {{comic.name}}
@@ -20,5 +20,5 @@
 </table>
 </div>
 <div class="modal-footer">
-  <button class="btn btn-primary" type="button" ng-click="close()">Close</button>
+  <button class="btn btn-primary" type="button" ng-click="vm.close()">Close</button>
 </div>
